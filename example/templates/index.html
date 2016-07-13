@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Payment - {{ title }}</title>
+</head>
+<body>
+<h1>{{ title }}</h1>
+<form name="frmPaymentRedirect" method="post" action="{{ redirectUrl }}">
+    {% for field, value in data %}
+    <input type="hidden" name="{{ field }}" value="{{ value }}"/>
+    {% endfor %}
+    <p>
+        You will be redirected to a secure page on mobilpay.ro
+    </p>
+    <p>
+        Click to continue <input type="submit" value="Submit">
+    </p>
+</form>
+</body>
+</html>
